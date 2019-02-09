@@ -1,0 +1,14 @@
+$ ->
+  
+  # Vars
+  $title = $('h1')
+  title = $title.text()
+  new_title = ''
+  delay = 24
+  
+  for i in [0...title.length]
+    t = if title[i] is ' ' then (new_title + ' ') else (new_title + '<span class="show" style="animation-delay: ' + (i * delay) + 'ms">' + title[i] + '</span>')
+    $title.html(t)
+    new_title = $title.html()
+
+  $title.addClass('focus')

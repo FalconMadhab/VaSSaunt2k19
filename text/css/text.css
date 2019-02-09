@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@-webkit-keyframes focus {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-transform: translate3d(-52%, -50%, 0);
+            transform: translate3d(-52%, -50%, 0);
+  }
+  50% {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-transform: translate3d(-49%, -50%, 0);
+            transform: translate3d(-49%, -50%, 0);
+  }
+  80% {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+  }
+}
+@keyframes focus {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-transform: translate3d(-52%, -50%, 0);
+            transform: translate3d(-52%, -50%, 0);
+  }
+  50% {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-transform: translate3d(-49%, -50%, 0);
+            transform: translate3d(-49%, -50%, 0);
+  }
+  80% {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+  }
+}
+@-webkit-keyframes ripple {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: white;
+  font-family: "Abril Fatface", serif;
+  font-size: 48px;
+  line-height: 1em;
+  background-color: black;
+}
+body:before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 102%;
+  height: 102%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191456/s113.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 0.33;
+  -webkit-transform: rotate(0deg) translate3d(-50%, -50%, 0);
+          transform: rotate(0deg) translate3d(-50%, -50%, 0);
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  white-space: nowrap;
+  opacity: 0;
+}
+h1.focus {
+  -webkit-animation: focus 1332ms ease-in-out forwards;
+          animation: focus 1332ms ease-in-out forwards;
+}
+h1 span {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+}
+h1 span:last-child {
+  color: #900;
+}
+h1 span.show {
+  -webkit-animation: ripple 666ms ease-in-out forwards;
+          animation: ripple 666ms ease-in-out forwards;
+}

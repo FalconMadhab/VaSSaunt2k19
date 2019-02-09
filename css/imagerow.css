@@ -1,0 +1,42 @@
+.badge-container {
+  display:flex; flex-direction:row;
+}
+
+.badge {
+  position:relative;
+ }
+
+ h6 {
+   position:absolute;
+   top:50%;
+   left:50%; 
+   transform: translateX(-50%) translateY(-50%);
+   margin: 0;
+   text-align:center;
+   color: white;
+   padding: 50px;
+
+   background-color: rgba(0,0,0,0.8);
+   opacity: 0;
+   -webkit-transition: opacity 0.6s;
+   -moz-transition: opacity 0.6s;
+   transition: opacity 0.6s;
+
+}
+  
+h6:hover {
+	  opacity: 1;      
+}
+
+img {
+  padding: 50px;
+  max-width:100%;
+  border-radius: 50%;
+}
+
+.text {
+  font-size: 24px;
+  border-radius: 50%;
+  height: 285px;
+  width: 285px;
+}
